@@ -1,2 +1,23 @@
-# MacOS-specific files
+# Dependencies
+node_modules/
+
+# Build files
+dist/
+dist-ssr/
+
+# Environment variables
+.env
+.env.local
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+
+# Editor settings
+.vscode/
+.idea/
+
+# OS files
 .DS_Store
+Thumbs.db
