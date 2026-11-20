@@ -1,12 +1,39 @@
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
+  const appName = "Event Planner";
+  const repoUrl = "https://github.com/chingu-voyages/V63-tier2-team-21";
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-3xl font-bold text-blue-600">
-        Welcome to Tier2 Team 23!
-      </h1>
+    <div className="min-h-screen flex flex-col justify-between bg-gray-100">
+      <Header appName={appName} />
+
+      <main className="flex-1 flex items-center justify-center px-4">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <h1 className="text-3xl font-bold text-blue-600 text-center">
+                Welcome to {appName}!
+              </h1>
+            }
+          />
+          <Route
+            path="/results"
+            element={
+              <h1 className="text-3xl font-bold text-blue-600 text-center">
+                Results
+              </h1>
+            }
+          />
+        </Routes>
+      </main>
+
+      <Footer repoUrl={repoUrl} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
